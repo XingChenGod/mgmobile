@@ -1,0 +1,459 @@
+@rem:750/10rem;
+/*--公共区域-*/
+*{
+  margin: 0;
+  padding: 0;
+}
+dl,ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  display: block;
+  border: none;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  zoom: 1;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.flex{
+  display: -webkit-flex;
+  display: flex;
+}
+/*--公共 结束--*/
+#main{
+  max-width: 540px;
+  height: 100%;
+  margin: 0 auto;
+}
+/*--头部 开始--*/
+#header-top{
+  height: 94/@rem;
+  justify-content: space-around;
+  align-items: center;
+}
+#header-top .hd-left{
+  width: 48/@rem;
+  height: 45/@rem;
+  background: url("../img/0-hd/hd-l.png") no-repeat center center/100% 100%;
+}
+#header-top .hd-middle{
+  width: 533/@rem;
+  height: 65/@rem;
+}
+#header-top .hd-middle input{
+  outline: none;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: 60/@rem;
+  background: #EEEEEE url("../img/0-hd/hd-search.png") no-repeat 15/@rem center/36/@rem 32/@rem;
+}
+#header-top .hd-right{
+  width: 48/@rem;
+  height: 45/@rem;
+  background: url("../img/0-hd/hd-r.png") no-repeat center center/100% 100%;
+}
+/*--头部 结束--*/
+/*--轮播图 开始--*/
+#banner{
+  position: relative;
+  width: 100%;
+  height: 300/@rem;
+  overflow: hidden;
+}
+#banner ul{
+  width: 400%;
+  justify-content: flex-start;
+}
+#banner ul li a img{
+  width: 750/@rem;
+  height: 300/@rem;
+}
+#banner .tab{
+  position: absolute;
+  bottom: 10/@rem;
+  left: 50%;
+  transform: translate(-50% , 0);
+  width: 110/@rem;
+  justify-content: space-around;
+}
+#banner .tab span{
+  width: 12/@rem;
+  height: 12/@rem;
+  border-radius: 50%;
+  background: #ffffff;
+}
+#banner .tab span.on{
+  background: red;
+}
+/*--轮播图 结束--*/
+/*--图标列表 开始--*/
+#navicon{
+  width: 100%;
+  height: 350/@rem;
+}
+#navicon ul.nav-icon{
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+#navicon ul li{
+  width: 20%;
+  height: 50%;
+  box-sizing: border-box;
+}
+#navicon ul li a img{
+  width: 100/@rem;
+  height: 100/@rem;
+  margin: 30/@rem auto 0;
+}
+#navicon ul li a p{
+  width: 100%;
+  height: 27/@rem;
+  font-size: 26/@rem;
+  text-align: center;
+  color: #65606C;
+}
+/*--图标列表 结束--*/
+/*--抢购倒计时  开始--*/
+#rushBuy{
+  width: 100%;
+  overflow: hidden;
+}
+#rushBuy .rush-time{
+  width: 100%;
+  height: 60/@rem;
+}
+#rushBuy .rush-time .today-text{
+  width: 90/@rem;
+  height: 100%;
+  padding: 0 20/@rem;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 23/@rem;
+  text-align: center;
+}
+#rushBuy .rush-time .rush-start{
+  width: 170/@rem;
+  height: 100%;
+  margin: 0 15/@rem;
+  padding: 16/@rem 0;
+  text-align: center;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-size: 28/@rem;
+}
+#rushBuy .rush-time .rush-over{
+  width: 192/@rem;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 23/@rem 10/@rem;
+  font-size: 19/@rem;
+  text-align: center;
+}
+#rushBuy .rush-time .rush-over span{
+  border-radius: 5/@rem;
+  margin: 0 5/@rem;
+  padding: 10/@rem;
+  background: #000;
+  color: #ffffff;
+}
+#rushBuy .rush-time .rush-more{
+  width: 84/@rem;
+  height: 20/@rem;
+  margin: 20/@rem;
+  background: url("../img/3-rushBuy/more.png") no-repeat center center/100% 100%;
+}
+/*--抢购倒计时  结束--*/
+/*--抢购列表 开始--*/
+#rushBuy .rush-list{
+  height: 400/@rem;
+  width: 100%;
+  padding: 5/@rem;
+  overflow: hidden;
+}
+#rushBuy .rush-list ul{
+  width: 1000%;
+  height: 100%;
+}
+#rushBuy .rush-list ul li{
+  float: left;
+  width: 237/@rem;
+  height: 385/@rem;
+  margin: 4/@rem;
+  padding: 5/@rem;
+  box-sizing: border-box;
+}
+#rushBuy .rush-list ul li a img{
+  width: 226/@rem;
+  height: 235/@rem;
+  border-radius: 5/@rem;
+}
+#rushBuy .rush-list ul li p{
+  width: 100%;
+  margin: 20/@rem 0;
+  color: gray;
+  text-align: center;
+  font-size: 24/@rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#rushBuy .rush-list ul li p span.origin-price{
+  text-decoration: line-through;
+}
+/*--抢购列表 结束--*/
+/*--超实惠 开始--*/
+#cheap{
+  width: 100%;
+  height: 700/@rem;
+  box-sizing: border-box;
+}
+#cheap .title{
+  width: 100%;
+  margin-bottom: 20/@rem;
+  color: gray;
+  text-indent: 20/@rem;
+  font-size: 24/@rem;
+}
+#cheap>div:not([class*=title]){
+  width: 100%;
+  border-top: 1px solid #dddddd;
+}
+#cheap div.one-floor{
+  height: 60%;
+}
+#cheap div.two-floor{
+  height: 40%;
+}
+#cheap .one-floor .one-left{
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #dddddd;
+}
+#cheap div p{
+  width: 100%;
+  text-align: center;
+}
+#cheap div p.main-title{
+  margin-top: 50/@rem;
+  color: black;
+  font-size: 30/@rem;
+}
+#cheap div p.sub-title{
+  width: 100%;
+  color: red;
+  font-size: 24/@rem;
+}
+#cheap .one-floor .one-left img{
+  width: 250/@rem;
+  height: 250/@rem;
+  margin: 20/@rem auto 0;
+}
+#cheap .one-floor .one-right{
+  width: 50%;
+  height: 100%;
+}
+#cheap .one-floor .one-right .right{
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid #dddddd;
+}
+#cheap .one-floor .one-right .right:nth-child(2){
+  border: none;
+}
+#cheap .one-floor .one-right .right img{
+  width: 150/@rem;
+  height: 150/@rem;
+}
+#cheap .two-floor div{
+  width: 33.3333%;
+  height: 100%;
+  border-right: 1px solid #dddddd;
+  box-sizing: border-box;
+}
+#cheap .two-floor div:nth-child(3){
+  border: none;
+}
+#cheap .two-floor div img{
+  width: 130/@rem;
+  height: 145/@rem;
+  margin: auto;
+}
+/*--热门市场 开始--*/
+#hot-market1{
+  width: 100%;
+  height: 450/@rem;
+  margin: 100/@rem 0;
+}
+#hot-market1 .title{
+
+  width: 100%;
+  height: 50/@rem;
+  font-size: 23/@rem;
+  text-align: center;
+  vertical-align: middle;
+}
+#hot-market1 .title span{
+  margin-bottom: 5/@rem;
+}
+#hot-market1 .title span.line{
+  display: inline-block;
+  width: 60/@rem;
+  border-bottom: 1px solid #000000;
+}
+#hot-market1 .title span.round{
+  display: inline-block;
+  width: 3/@rem;
+  height: 3/@rem;
+  background: #000;
+  transform: rotateZ(45deg);
+}
+#hot-market1 ul{
+  width: 100%;
+  height: 780/@rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+#hot-market1 ul li{
+  width: 25%;
+  height: 25%;
+  box-sizing: border-box;
+}
+#hot-market1 ul li img{
+  width: 100/@rem;
+  height: 100/@rem;
+  margin: auto;
+}
+#hot-market1 ul li p{
+  width: 100%;
+  margin-top: 20/@rem;
+  text-align: center;
+  font-size: 26/@rem;
+  color: gray;
+}
+/*--热门市场 结束--*/
+/*--猜你喜欢 开始--*/
+#like{
+  width: 100%;
+  margin-top: 400/@rem;
+}
+#like .title{
+  width: 314/@rem;
+  height: 31/@rem;
+  margin: 0 auto 20/@rem;
+  background: url("../img/7-like/title.jpg") no-repeat center center/100% 100%;
+}
+//#like ul{
+//  justify-content: flex-start;
+//  flex-wrap: wrap;
+//}
+#like ul li{
+  float: left;
+  width: 335/@rem;
+  height: 624/@rem;
+  margin: 16/@rem;
+  box-sizing: border-box;
+}
+#like ul li img{
+  width: 357/@rem;
+  height: 466/@rem;
+}
+#like ul li p.tag{
+  height: 100/@rem;
+  padding: 15/@rem 20/@rem;
+  box-sizing: border-box;
+  color: #5A6F7A;
+}
+#like ul li p.tag span{
+  padding: 10/@rem;
+  background: #EFF3F6;
+  font-size: 20/@rem;
+}
+#like ul li p.price-xin{
+  height: 55/@rem;
+}
+#like ul li p.price-xin span.price{
+  margin-left: 20/@rem;
+  font-size: 24/@rem;
+  font-weight: bold;
+  color: black;
+}
+#like ul li p.price-xin span.xin{
+  display: block;
+  width: 75/@rem;
+  margin-right: 20/@rem;
+  font-size: 24/@rem;
+  color: #C3C6C7;
+  background: url("../img/7-like/icon.jpg") no-repeat 100% 0;
+  background-size: 27/@rem 27/@rem;
+}
+/*--猜你喜欢 结束--*/
+/*--底部导航 开始--*/
+#footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100/@rem;
+  background: #ffffff;
+  z-index: 99;
+}
+#footer ul{
+  width: 100%;
+  height: 100%;
+}
+#footer ul li{
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+#footer ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#footer ul li a p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 27/@rem;
+}
+#footer ul li a p.on{
+  color: #FF6885;
+}
+#footer ul li:nth-child(1) a{
+  background: url("../img/8-bottomNav/1.png") no-repeat center 14/@rem;
+  background-size: 45/@rem 45/@rem;
+}
+#footer ul li:nth-child(2) a{
+  background: url("../img/8-bottomNav/2.png") no-repeat center 14/@rem;
+  background-size: 45/@rem 45/@rem;
+}
+#footer ul li:nth-child(3) a{
+  background: url("../img/8-bottomNav/3.png") no-repeat center 14/@rem;
+  background-size: 45/@rem 45/@rem;
+}
+#footer ul li:nth-child(4) a{
+  background: url("../img/8-bottomNav/4.png") no-repeat center 14/@rem;
+  background-size: 45/@rem 45/@rem;
+}
+/*--底部导航 结束--*/

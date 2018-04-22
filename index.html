@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        (function () {
+            var html = document.querySelector("html");
+            var width = html.getBoundingClientRect().width;
+            html.style.fontSize = width/10 + "px";
+        })();
+    </script>
+    <title>蘑菇街</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style id="css">
+</style>
+<body>
+<div id="main">
+    <!--头部 开始-->
+    <header id="header-top" class="flex">
+        <div class="hd-left">
+        </div>
+        <div class="hd-middle flex">
+            <input type="text" placeholder="连衣裙">
+        </div>
+        <div class="hd-right">
+        </div>
+    </header>
+    <!--头部 结束-->
+    <!--轮播图 开始-->
+    <section id="banner">
+        <ul class="flex">
+            <!--<li><a href="#"><img src="img/1-banner/1.jpg" alt=""></a></li>-->
+            <!--<li><a href="#"><img src="img/1-banner/2.jpg" alt=""></a></li>-->
+            <!--<li><a href="#"><img src="img/1-banner/3.jpg" alt=""></a></li>-->
+        </ul>
+        <div class="tab flex">
+            <span class="on"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+    <!--轮播图 结束-->
+    <!--图标列表 开始-->
+    <section id="navicon">
+        <ul class="nav-icon flex">
+            <li><a href=""><img src="img/2-navIcon/1.gif" alt="">
+                <p>一分夺宝</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/2.jpg" alt="">
+                <p>9.9包邮</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/3.gif" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/4.70.jpg" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/5.png" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/6.jpg" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/7.jpg" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/8.png" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/9.jpg" alt="">
+                <p>限时快抢</p>
+            </a></li>
+            <li><a href=""><img src="img/2-navIcon/10.gif" alt="">
+                <p>限时快抢</p>
+            </a></li>
+        </ul>
+    </section>
+    <!--图标列表 结束-->
+    <!--抢购倒计时 开始-->
+    <section id="rushBuy">
+        <div class="rush-time clearfix">
+            <div class="today-text fl">
+                今日必拼
+            </div>
+            <div class="rush-start fl">
+                每天0点上新
+            </div>
+            <div class="rush-over fl">
+                <span>00</span>:<span>00</span>:<span>00.0</span>
+            </div>
+            <div class="rush-more fr">
+
+            </div>
+        </div>
+        <div class="rush-list">
+            <ul>
+                <li>
+                    <a href=""><img src="img/3-rushBuy/1.jpg" alt=""></a>
+                    <p>大理石代替色12色眼影盘</p>
+                    <p>
+                        <span class="special-price">￥39</span>
+                        <span class="origin-price">￥70</span>
+                    </p>
+                </li>
+                <li>
+                    <a href=""><img src="img/3-rushBuy/2.jpg" alt=""></a>
+                    <p>御泥坊清透盈润面膜21片</p>
+                    <p>
+                        <span class="special-price">￥39</span>
+                        <span class="origin-price">￥70</span>
+                    </p>
+                </li>
+                <li>
+                    <a href=""><img src="img/3-rushBuy/3.jpg" alt=""></a>
+                    <p>补水锁水嫩白提亮5件套</p>
+                    <p>
+                        <span class="special-price">￥129</span>
+                        <span class="origin-price">￥378</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--抢购倒计时 结束-->
+    <!--超实惠 开始-->
+    <section id="cheap">
+        <div class="title">超实惠-促销直达</div>
+        <div class="one-floor clearfix">
+            <div class="one-left fl">
+                <a href="#">
+                    <p class="main-title">秒变女王</p>
+                    <p class="sub-title">春装上新抢先购</p>
+                    <img src="img/5-cheap/1.png" alt="">
+                </a>
+            </div>
+            <div class="one-right fr floor">
+                <div class="right clearfix">
+                    <a href="#">
+                        <div class="fl">
+                            <p class="main-title">省心套装</p>
+                            <p class="sub-title">一套搞定约会style</p>
+                        </div>
+                        <img class="fr" src="img/5-cheap/2.png" alt="">
+                    </a>
+                </div>
+                <div class="right clearfix">
+                    <a href="#">
+                        <div class="fl">
+                            <p class="main-title">秒变女王</p>
+                            <p class="sub-title">春装上新抢先购</p>
+                        </div>
+                        <img class="fr" src="img/5-cheap/4.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="two-floor clearfix">
+            <div class="fl">
+                <a href="#">
+                    <p class="main-title">早春美鞋</p>
+                    <p class="sub-title">39元任选</p>
+                    <img src="img/5-cheap/4.png" alt="">
+                </a>
+            </div>
+            <div class="fl">
+                <a href="#">
+                    <p class="main-title">毛衣卫衣</p>
+                    <p class="sub-title">初春新款新气象</p>
+                    <img src="img/5-cheap/5.png" alt="">
+                </a>
+            </div>
+            <div class="fl">
+                <a href="#">
+                    <p class="main-title">新品男装</p>
+                    <p class="sub-title">必备时髦单品</p>
+                    <img src="img/5-cheap/6.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--超实惠 结束-->
+    <!--热门市场 开始-->
+    <section id="hot-market1">
+        <div class="title">
+            <span class="line"></span>
+            <span class="round"></span>
+            热门市场
+            <span class="round"></span>
+            <span class="line"></span>
+        </div>
+        <ul class="flex">
+            <li><a href=""><img src="img/6-hotMarket/1.png" alt="">
+                <p>春装上新</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/2.png" alt="">
+                <p>约会套装</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/3.png" alt="">
+                <p>开春卫衣</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/4.png" alt="">
+                <p>显瘦裤装</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/5.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/6.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/7.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/8.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/9.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/10.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/11.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/12.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/13.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/14.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/15.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+            <li><a href=""><img src="img/6-hotMarket/16.png" alt="">
+                <p>女鞋精选</p>
+            </a></li>
+        </ul>
+    </section>
+    <!--热门市场 结束-->
+    <!--猜你喜欢 开始-->
+    <section id="like">
+        <div class="title">
+        </div>
+        <ul class="clearfix">
+            <li>
+                <a href="#">
+                    <img src="img/7-like/1.jpg" alt="">
+                    <p class="tag clearfix">
+                        <span class="fl">吊带连衣裙</span>
+                    </p>
+                    <p class="price-xin clearfix">
+                        <span class="price fl">
+                            ￥79
+                        </span>
+                        <span class="xin fr">
+                            160
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/7-like/2.jpg" alt="">
+                    <p class="tag clearfix">
+                        <span class="fl">吊带连衣裙</span>
+                    </p>
+                    <p class="price-xin clearfix">
+                        <span class="price fl">
+                            ￥79
+                        </span>
+                        <span class="xin fr">
+                            160
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/7-like/3.jpg" alt="">
+                    <p class="tag clearfix">
+                        <span class="fl">吊带连衣裙</span>
+                    </p>
+                    <p class="price-xin clearfix">
+                        <span class="price fl">
+                            ￥79
+                        </span>
+                        <span class="xin fr">
+                            160
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/7-like/4.jpg" alt="">
+                    <p class="tag clearfix">
+                        <span class="fl">吊带连衣裙</span>
+                    </p>
+                    <p class="price-xin clearfix">
+                        <span class="price fl">
+                            ￥79
+                        </span>
+                        <span class="xin fr">
+                            160
+                        </span>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--猜你喜欢 结束-->
+    <!--底部导航 开始-->
+    <section id="footer">
+        <ul class="clearfix">
+            <li>
+                <a href="">
+                    <p class="on">首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <p>我的</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--底部导航 结束-->
+</div>
+<script>
+    $.get(
+        "http://tanzhouweb.com/mg/mgData.php",
+        {
+            title : "banner"
+        },
+        function (data) {
+            var data = JSON.parse(data);
+            console.log(data);
+            var str = "";
+            var oUl = document.querySelector("#banner ul");
+            data.forEach(function (value) {
+                str += "<li><a href='#'><img src='"+value+"' alt=''></a></li>";
+            });
+            oUl.innerHTML = str;
+            banner();
+        }
+    );
+    $.get(
+        "http://tanzhouweb.com/mg/mgData.php",
+        {
+            title : "navIcon"
+        },
+        function (data) {
+            console.log(data)
+        }
+    );
+    function banner() {
+        var oPic = document.querySelector("#banner"),
+            oUl = document.querySelector("#banner ul"),
+            ali = oUl.children,
+            aTab = document.querySelectorAll("#banner .tab span"),
+            oCss = document.querySelector("#css"),
+            length = ali.length,
+            widthPic = oPic.offsetWidth,
+            now = 0;
+
+        //首位添加
+        console.log(ali)
+        oUl.appendChild(ali[0].cloneNode(true));
+        oUl.insertBefore(ali[length-1].cloneNode(true) , ali[0]);
+        //设置ul宽度
+        var style = "#banner ul{width:"+length+2+"00%;}";
+        oCss.innerHTML += style;
+        cssTransform(oUl , "translateX" , -widthPic);
+        //手指按下
+        //处理手机按下间隔
+        //var time = new Date();
+
+        //if (new Date() - time > 300) {
+        //time = new Date();
+        oPic.addEventListener("touchstart" , function (ev) {
+            clearInterval(Timer1);
+            startPoint = ev.changedTouches[0].clientX;
+            startX = cssTransform(oUl , "translateX");
+            //console.log(startPoint , startX)
+        });
+        oPic.addEventListener("touchmove" , function (ev) {
+            oUl.style.transition = "";
+            var nowPoint = ev.changedTouches[0].clientX;
+            var Left = nowPoint - startPoint + startX;
+            //oUl.style.transform = "translateX("+Left+"px)";
+            cssTransform(oUl , "translateX" , Left);
+            //console.log(1)
+        });
+        oPic.addEventListener("touchend" , function (ev) {
+            var Left = cssTransform(oUl , "translateX");
+            bannerAuto(Math.round((-Left)/widthPic)-1 , Left);
+            auto();
+        });
+        //}
+
+        //自动轮播
+        var Timer1 = null;
+        auto();
+        function auto() {
+            Timer1 = setInterval(function () {
+                var Left = cssTransform(oUl , "translateX");
+                now ++;
+                now %= length;
+                if (!now)now = 3;
+                bannerAuto(now , Left);;
+            } , 2000);
+        }
+
+        function bannerAuto(now ,Left) {
+            //var Left = cssTransform(oUl , "translateX");
+            //比例
+            //now = Math.round((-Left)/widthPic)-1;
+            //console.log(Left,now);
+            if (now < 0){
+                Left = 0
+            } else if (!now) {//now=0
+                Left = -widthPic;
+            } else {
+                Left = -(now+1)*widthPic;
+            }
+            oUl.style.transition = "0.3s";
+            cssTransform(oUl , "translateX" , Left);
+            if (now === 3) {
+                setTimeout(function () {
+                    oUl.style.transition = "";
+                    cssTransform(oUl , "translateX" , -widthPic);
+                } , 200);
+            }
+            if (now < 0) {
+                setTimeout(function () {
+                    oUl.style.transition = "";
+                    cssTransform(oUl , "translateX" , -length*widthPic);
+                } , 200)
+            }
+
+            for (var i = 0,lengthTab = aTab.length;i < lengthTab;i++) {
+                aTab[i].className = "";
+            }
+            if (now < 0) {
+                now = lengthTab-1;
+                aTab[now].className = "on";
+            } else if (!now) {
+                now = 0;
+                aTab[now].className = "on";
+            } else {
+                aTab[now%3].className = "on";
+            }
+        }
+
+        function cssTransform(obj,attr,val) {
+            if( !obj.transform ) {
+                obj.transform = {};
+            }
+            if( arguments.length ===3 ){  // 3个参数 设置
+                obj.transform[attr] = val;
+                var strVal = '';
+                for ( var key in obj.transform ){
+                    switch ( key ){
+                        case 'rotate':
+                        case 'rotateX':
+                        case 'rotateY':
+                            strVal += key + '('+obj.transform[key]+'deg) ';
+                            break;
+                        case 'translate':
+                        case 'translateX':
+                        case 'translateY':
+                            strVal += key + '('+obj.transform[key]+'px) ';
+                            break;
+                        case 'scale':
+                        case 'scaleX':
+                        case 'scaleY':
+                            strVal += key + '('+obj.transform[key]+') ';
+                            break;
+                    }
+                    obj.style.transform = strVal;
+                }
+
+            }else{ // 2个参数 获取
+                val = obj.transform[attr];
+                if( typeof val === 'undefined'){
+                    if( attr === 'scale' || attr === 'scaleX' || attr === 'scaleY' ){
+                        val = 1;
+                    }else{
+                        val = 0;
+                    }
+                }
+                return val;
+            }
+        }
+    }
+</script>
+</body>
+</html>
