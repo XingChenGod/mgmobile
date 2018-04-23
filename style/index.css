@@ -34,6 +34,9 @@ img {
   display: -webkit-flex;
   display: flex;
 }
+body{
+  -webkit-tap-highlight-color: transparent;
+}
 /*--公共 结束--*/
 #main {
   max-width: 540px;

@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script>
-        (function () {
+        changrem();
+        function changrem() {
             var html = document.querySelector("html");
             var width = html.getBoundingClientRect().width;
+            if (width > 540) {
+                width = 540;
+            }
             html.style.fontSize = width/10 + "px";
-        })();
+        }
+        window.onresize = changrem;
     </script>
     <title>蘑菇街</title>
     <link rel="stylesheet" href="style/index.css">
@@ -388,6 +393,7 @@
         var style = "#banner ul{width:"+length+2+"00%;}";
         oCss.innerHTML += style;
         cssTransform(oUl , "translateX" , -widthPic);
+        cssTransform(oUl , "translateZ" , 0);
         //手指按下
         //处理手机按下间隔
         //var time = new Date();
