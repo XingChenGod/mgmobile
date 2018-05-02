@@ -136,9 +136,9 @@ switch ($title){
         case 'endDate':
             $arr = array(
                 'year'=>2018,
-                'mon'=>2,
-                'date'=>13,
-                'hour'=>0,
+                'mon'=>5,
+                'date'=>3,
+                'hour'=>12,
                 'min'=>0,
                 'sec'=>0
             );

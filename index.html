@@ -94,7 +94,7 @@
             <div class="rush-start fl">
                 每天0点上新
             </div>
-            <div class="rush-over fl">
+            <div class="rush-over fl" id="rush-over">
                 <span>00</span>:<span>00</span>:<span>00.0</span>
             </div>
             <div class="rush-more fr">
@@ -349,14 +349,68 @@
     <!--底部导航 结束-->
 </div>
 <script>
+    //抢购部分 开始
+    (function () {
+        var oRush = document.getElementById("rush-over");
+        $.get(
+            "http://xingchenlegendary.top/mg/mgData.php",
+            {
+              "title" : "endDate"
+            },
+            function (data) {
+                var data = JSON.parse(data);
+                console.log(data);
+                var year = data.year,
+                    mouth = data.mon,
+                    date = data.date,
+                    hours = data.hour;
+                console.log(year,mouth,date,hours);
+                countDown(year,mouth,date,hours,oRush)
+            }
+        );
+        function countDown(year,mouth,date,hours,text) {
+            var targetDate = new Date(year,mouth-1,date,hours);
+
+            var d,h,m,s;
+            setInterval(fn() , 1000/10);
+            function fn() {
+                clearInterval(1);
+                var nowHours = new Date();
+                //转换毫秒
+                var mins = targetDate - nowHours;
+                //转换为秒.0的格式
+                mins = mins/1000;
+
+                d = Math.floor(mins/60/60/24);//天
+                h = Math.floor(mins/60/60)%24;//小时
+                m = Math.floor(mins/60)%60;//分
+                s = (mins%60).toFixed(1);//秒
+
+                d = zero(d);
+                h = zero(h);
+                m = zero(m);
+                s = zero(s);
+
+                //text.innerHTML = d+"天"+h+"时"+m+"分"+s+"秒";
+                text.innerHTML = "<span>"+h+"</span>:<span>"+m+"</span>:<span>"+s+"</span>";
+                return fn;
+            }
+            //加零
+            function zero(a) {
+                return a<10?"0"+a:a;
+            }
+        }
+
+    })();
+    //抢购结束
+
     $.get(
-        "http://tanzhouweb.com/mg/mgData.php",
+        "http://xingchenlegendary.top/mg/mgData.php",
         {
             title : "banner"
         },
         function (data) {
             var data = JSON.parse(data);
-            console.log(data);
             var str = "";
             var oUl = document.querySelector("#banner ul");
             data.forEach(function (value) {
@@ -366,15 +420,17 @@
             banner();
         }
     );
+
     $.get(
-        "http://tanzhouweb.com/mg/mgData.php",
+        "http://xingchenlegendary.top/mg/mgData.php",
         {
-            title : "navIcon"
+            "title" : "navIcon"
         },
         function (data) {
             console.log(data)
         }
     );
+    //轮播 开始
     function banner() {
         var oPic = document.querySelector("#banner"),
             oUl = document.querySelector("#banner ul"),
@@ -516,6 +572,7 @@
             }
         }
     }
+    //轮播 结束
 </script>
 </body>
 </html>
